@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6" *ngFor="let usuario of users">
+
+            <div class="card">
+                <div class="card-header">
+                    {{usuario.username}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Nombre: {{usuario.name}}</h5>
+                  <p class="card-text"> E-mail: {{usuario.email}} </p>
+                  <p class="card-text"> Teléfono: {{usuario.phone}} </p>
+                  <p class="card-text"> Sitio Web: {{usuario.website}} </p>
+                  <a href="#" class="btn btn-primary">Ver Más</a>
+                </div>
+              </div>
+
+
+        </div>
+    </div>
+</div>

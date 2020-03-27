@@ -1,0 +1,17 @@
+<form class="form-signin">
+
+    <label for="inputUser">Usuario</label>
+    <input type="text" class="form-control" placeholder="Usuario" #inputUser required autofocus>
+
+    <label for="inputPassword">Contraseña</label>
+    <input type="password" class="form-control" placeholder="Contraseña" #inputPass required>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox"> Recordarme
+      </label>
+    </div>
+
+    <button (click)="validarDatos()" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+    
+  </form>
