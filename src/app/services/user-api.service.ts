@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserApiService {
 
+  autorizar: boolean;
+
   constructor(private http: HttpClient) { }
 
   
@@ -17,6 +19,6 @@ export class UserApiService {
 
     return this.http.get(url_api);
   }
-
+ 
 
 }

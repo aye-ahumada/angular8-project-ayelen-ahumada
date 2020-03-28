@@ -1,4 +1,7 @@
 import { Component, OnInit ,ViewChild,ElementRef } from '@angular/core';
+import { UserApiService } from '../services/user-api.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -10,14 +13,13 @@ export class LoginComponent implements OnInit {
   @ViewChild('inputUser', {static: true}) inputUser: ElementRef;
   @ViewChild('inputPass', {static: true}) inputPass: ElementRef;
 
-  constructor() { }
+  constructor(private userApi: UserApiService, private router: Router ) {}
 
   userOriginal = "test";
   passOriginal = "123";
 
   ngOnInit(): void {
   }
-
 
   validarDatos() {
 
@@ -26,10 +28,11 @@ export class LoginComponent implements OnInit {
 
     if(inputUser == this.userOriginal && inputPass == this.passOriginal)
     {
-      alert('todo OK')
+      this.userApi.autorizar = true
+      this.router.navigate(['/usuarios'])
     }
     else{
-      alert('todo mal')
+      alert("Por favor inicie sesión")
     }    
 
   }
