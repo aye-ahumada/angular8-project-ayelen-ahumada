@@ -2,7 +2,7 @@
 
     <div class="row">
 
-        <div class="col-md-6" *ngFor="let usuario of users">
+        <div class="col-md-6" *ngFor="let usuario of users, let i = index">
 
             <div class="card">
                 <div class="card-header">
@@ -13,7 +13,7 @@
                   <p class="card-text"> E-mail: {{usuario.email}} </p>
                   <p class="card-text"> Teléfono: {{usuario.phone}} </p>
                   <p class="card-text"> Sitio Web: {{usuario.website}} </p>
-                  <a href="#" class="btn btn-primary">Ver Más</a>
+                  <a href="#" class="btn btn-primary" (click)="verPerfil(i)" >Ver Más</a>
                   <a href="#" class="btn btn-danger">Eliminar</a>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApiService } from '../services/user-api.service';
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -9,9 +8,9 @@ import { UserApiService } from '../services/user-api.service';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  users: any;
+  users;
 
-  constructor(private userApi: UserApiService) {}
+  constructor(private userApi: UserApiService, private router: Router) {}
 
   ngOnInit() {
     this.getUsuarios()
@@ -25,4 +24,9 @@ export class UsuariosComponent implements OnInit {
       err => console.log(err)
     )
   }
+
+  verPerfil(i){
+    this.router.navigate(["/usuario/", i]);
+  }
+
 }
