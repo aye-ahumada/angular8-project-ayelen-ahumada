@@ -1,18 +1,22 @@
-<div>
+<div class="text-center">
   <form class="form-signin">
+    <img class="mb-4" src="./assets/img/ayi-logo.png" alt="" width="144" height="144">
 
-    <label for="inputUser">Usuario</label>
-    <input type="text" class="form-control" placeholder="Ingrese su usuario" #inputUser required autofocus>
+    <h1 class="h3 mb-3 font-weight-normal">Por favor inicie sesión</h1>
 
-    <label for="inputPassword">Contraseña</label>
-    <input type="password" class="form-control" placeholder="Ingrese su contraseña" #inputPass required>
+    <label for="inputUser" class="sr-only">Usuario</label>
+    <input type="text" id="inputUser" class="form-control" placeholder="Ingrese su usuario" #inputUser required
+      autofocus>
+
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese su contraseña" #inputPass
+      required>
 
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox"> Recordarme
+        <input type="checkbox" value="remember-me"> Recordarme
       </label>
     </div>
-
     <button (click)="validarDatos()" class="btn btn-lg btn-primary btn-block" type="button">Ingresar</button>
 
   </form>

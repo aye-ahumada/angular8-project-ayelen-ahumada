@@ -1,24 +1,17 @@
 <div class="container">
-
+    
     <div class="row">
 
-        <div class="col-md-6" *ngFor="let usuario of users, let i = index">
-
-            <div class="card">
-                <div class="card-header">
-                    {{usuario.username}}
-                </div>
+        <div class="col-sm-4 py-2" *ngFor="let usuario of users, let i=index">
+            <div class="card text-white bg-primary">
                 <div class="card-body">
-                  <h5 class="card-title">Nombre: {{usuario.name}}</h5>
-                  <p class="card-text"> E-mail: {{usuario.email}} </p>
-                  <p class="card-text"> Teléfono: {{usuario.phone}} </p>
-                  <p class="card-text"> Sitio Web: {{usuario.website}} </p>
-                  <a class="btn btn-primary" (click)="verPerfil(i)" >Ver Más</a>
-                  <a class="btn btn-danger">Eliminar</a>
+                    <h3 class="card-title">{{usuario.username}}</h3>
+                    <p class="card-text">Nombre: {{usuario.name}}</p>
+                    <p class="card-text">E-mail: {{usuario.email}}</p>
+                    <button type="button" class="btn btn-outline-light" (click)="verPerfil(i)">Ver Más</button>
                 </div>
-              </div>
-
-
+            </div>
         </div>
+
     </div>
 </div>

@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
 })
 export class UsuariosComponent implements OnInit {
   users;
-  
 
   constructor(private userApi: UserApiService, private router: Router) {}
 
   ngOnInit() {
     this.getUsuarios()
   }
+  
   getUsuarios(){
     this.userApi.getAllUsers().subscribe(
       res => {
