@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UsuariosComponent implements OnInit {
   users;
+  
 
   constructor(private userApi: UserApiService, private router: Router) {}
 
